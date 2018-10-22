@@ -1,0 +1,50 @@
+What are <code>in_channels</code>, <code>out_channels</code>, <code>kernel_size</code> and <code>stride</code>? <br> <br> Our data's dimension is: (number of images, 28, 28, 1), which are (28, 28) images and has only 1 channel of color. Note that a color image normally has 3 channels: red, green and blue. However, here we're only working with 1 channel of color, something like this: <br>
+
+<figure>
+  <p><img src="img/mnist_one.png" alt="MNIST image one channel" width="50" height="50" class="center">
+  <figcaption>MNIST image with dimension: (28, 28, 1) </figcaption>
+</figure>
+
+Thus, our <code>in_channels</code> would be <b>1</b>. 
+
+<br><br>
+
+Next, <code>out_channel</code> is the number of channels produced by the convolution, or basically the number of filters that will be trained for this Conv layers. TODO, more illustration here?
+
+<br><br>
+
+<code>kernel_size</code> is the size of the kernels that will be `convolved` around the image. <code>kernel_size</code>, <code>padding</code> and <code>stride</code> will determine the size of the feature maps produced by the convolution operation while <code>output_channel</code> will determine the number of feature maps.
+
+<br><br>
+<code>stride</code> is, in simple terms, the number of pixels the convolution will skip for each step. 
+
+<br><br>
+See the gif (jif, yes) below to better understand a convolution operation:
+
+<br>
+
+<figure>
+  <p><img src="img/conv_nopadding_stride1.gif" alt="Convolution without zero-padding and with stride of 1" width="200" height="200" class="center">
+  <figcaption>Convolution without zero-padding and with stride of 1</figcaption>
+</figure>
+
+ <br> 
+
+ <figure>
+  <p><img src="img/conv_with0padding_stride1.gif" alt="Convolution with zero-padding and with stride of 1" width="200" height="200" class="center">
+  <figcaption>Convolution with zero-padding and with stride of 1</figcaption>
+</figure>
+
+ <br> 
+
+<figure>
+  <p><img src="img/conv_with0padding_stride2.gif" alt="Convolution with zero-padding and with stride of 2" width="200" height="200" class="center">
+  <figcaption>Convolution with zero-padding and with stride of 2</figcaption>
+</figure>
+
+ <br> 
+
+
+ Further read: https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/"
+
+ https://medium.com/syncedreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-42f33d4378e0
