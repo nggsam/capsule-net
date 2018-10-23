@@ -1,3 +1,7 @@
+/* 
+  Author: Sam Ng - chanhnp@gmail.com, github.com/exfoxz
+*/
+
 *,
 *:before,
 *:after{
@@ -31,17 +35,16 @@ header h1 {
   padding: 15px 10px 10px 15px;
 }
 
-#sidebar .sidebar__inner > .inner p {
-    /*text-align: justify;*/
-    /*text-justify: inter-word;*/
+#sidebar > .inner p {
+
 }
 
-#sidebar .sidebar__inner > .inner {
+#sidebar > .inner {
  -webkit-transition: opacity 0.5s;
  transition: opacity 0.5s;
 }
 
-#sidebar .sidebar__inner > .inner.pre-animation {
+#sidebar > .inner.pre-animation {
   opacity: 0;
 }
 
@@ -72,8 +75,6 @@ footer p{
     margin-left: auto;
     margin-right: auto;
 }*/
-
-
 
 
 body,
@@ -151,7 +152,6 @@ span.hoverable {
 
 span.hoverable:hover {
   font-weight: bold;
-  /*text-decoration: none;*/
   border-bottom: 3px solid black;
 }
 
