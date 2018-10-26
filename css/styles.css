@@ -5,7 +5,8 @@
 *,
 *:before,
 *:after{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body{
@@ -25,13 +26,17 @@ header h1 {
 .outer-container{
   margin: 0 auto;
   padding: 0px 10px 0px 10px;
+  min-height: 0px;
 }
 
-#content{
+#nb-content{
   color: darkgrey;
 }
 
 #sidebar{
+/*  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);*/
   padding: 15px 10px 10px 15px;
 }
 
@@ -41,6 +46,7 @@ header h1 {
 
 #sidebar > .inner {
  -webkit-transition: opacity 0.5s;
+ -o-transition: opacity 0.5s;
  transition: opacity 0.5s;
 }
 
@@ -84,13 +90,21 @@ html,
 }
 .outer-container,
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;  
+  min-height: 0;
 }
 .outer-container {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .content {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .top {
@@ -98,17 +112,17 @@ html,
 }
 
 #left {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-width: 300px;
-  border-radius: 10px;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
-  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
-
 }
 
 #right {
-  flex: 2;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   margin-left: 10px;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -116,14 +130,29 @@ html,
 
   border-radius: 10px;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
-  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
 
-  transition: flex 0.3s ease-in-out;
+  -webkit-transition: -webkit-box-flex 0.3s ease-in-out, -webkit-box-shadow 0.1s linear;
+
+  transition: -webkit-box-flex 0.3s ease-in-out, -webkit-box-shadow 0.1s linear;
+
+  -o-transition: flex 0.3s ease-in-out, box-shadow 0.1s linear;
+
+  transition: flex 0.3s ease-in-out, box-shadow 0.1s linear;
+
+  transition: flex 0.3s ease-in-out, box-shadow 0.1s linear, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out, -webkit-box-shadow 0.1s linear;
+}
+
+#right:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
 #right.shrink {
-  flex: 0.3;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
 }
 
 .content div {
@@ -146,7 +175,11 @@ figure {
 span.hoverable {
   text-decoration: none;
   border-bottom: 2px solid #d1d1d1;
+  -webkit-transition: font-weight 0.3s;
+  -o-transition: font-weight 0.3s;
   transition: font-weight 0.3s;
+  -webkit-transition: border-bottom 0.3s;
+  -o-transition: border-bottom 0.3s;
   transition: border-bottom 0.3s;
 }
 
@@ -158,7 +191,10 @@ span.hoverable:hover {
 /* Medium screens */
 @media all and (max-width: 800px) {
   .content {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #right {
     margin-left: 0px;
@@ -170,4 +206,3 @@ span.hoverable:hover {
 @media all and (max-width: 500px) {
 
 }
-
