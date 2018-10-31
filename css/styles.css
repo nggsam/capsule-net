@@ -112,10 +112,10 @@ html,
 }
 
 #left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
+  /*-webkit-box-flex: 0;*/
+      /*-ms-flex: 0;*/
           flex: 1;
-  min-width: 300px;
+  /*min-width: 300px;*/
   background-color: #fff;
 }
 
@@ -144,10 +144,11 @@ html,
   transition: flex 0.3s ease-in-out, box-shadow 0.1s linear, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out, -webkit-box-shadow 0.1s linear;
 }
 
-#right:hover {
+/*#right:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
+*/
 
 #right.shrink {
   -webkit-box-flex: 0.3;
