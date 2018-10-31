@@ -134,7 +134,7 @@ html,
 
 #left .inner {
   line-height: 1.0rem;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 10px;
 }
 
@@ -211,6 +211,11 @@ div.sticky {
   height: 15px;
   fill: black;
 }  
+
+span.note {
+  font-size: 25px;
+  color: red;
+}
 
 .icon .rotate {
   transform: rotate(90deg);

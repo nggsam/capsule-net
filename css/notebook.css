@@ -11459,8 +11459,8 @@ div#notebook_panel {
 div#notebook {
   font-size: 13px;
   line-height: 20px;
-  overflow-y: hidden;
-  overflow-x: auto;
+  /*overflow-y: hidden;*/
+  /*overflow-x: auto;*/
   width: 100%;
   /* This spaces the page away from the edge of the notebook area */
   /*padding-top: 20px;*/
