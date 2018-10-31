@@ -12,10 +12,10 @@
 
             if(cl.contains("shrink")) {
                 cl.remove("shrink");
-                expandBtn.innerHTML = "Expand";
+                // expandBtn.innerHTML = "Expand";
             } else {
                 cl.add("shrink");
-                expandBtn.innerHTML = "Close";
+                // expandBtn.innerHTML = "Close";
             }
         }
 

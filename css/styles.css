@@ -37,7 +37,7 @@ header h1 {
 /*  border-radius: 10px;
   -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);*/
-  padding: 15px 10px 10px 15px;
+  padding: 0px 10px 15px;
 }
 
 #sidebar > .inner p {
@@ -112,18 +112,38 @@ html,
 }
 
 #left {
+  margin-bottom: 3px;
+  margin-right: 0px;
+
+  position: relative;
   /*-webkit-box-flex: 0;*/
       /*-ms-flex: 0;*/
           flex: 1;
-  /*min-width: 300px;*/
+  min-width: 300px;
   background-color: #fff;
+
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+#left p {
+  line-height: 1.0rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#left .inner {
+  line-height: 1.0rem;
+  font-size: 13px;
+  margin-top: 10px;
 }
 
 #right {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  margin-left: 10px;
+  margin-left: 3px;
+  margin-top: 0px;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -155,6 +175,51 @@ html,
       -ms-flex: 0.3;
           flex: 0.3;
 }
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  top: 0;
+}
+
+#middle {
+  flex: 0;
+  min-height: 20px;
+  min-width: 20px;
+  position: relative;
+}
+
+#expand-sidebar {
+  width: 15;
+  height: 15;
+  padding: 2px;
+  text-decoration: none;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -10px 0 0 -10px;
+  outline: 0;
+  border: 0;
+}
+
+#expand-sidebar .icon {
+  background: url(https://image.flaticon.com/icons/svg/161/161697.svg) no-repeat;
+  float: left;
+  width: 15px;
+  height: 15px;
+  fill: black;
+}  
+
+.icon .rotate {
+  transform: rotate(90deg);
+}
+#expand-sidebar .span {
+    float: left;
+    width: 15px;
+    height: 15px;
+}  
 
 .content div {
   overflow: scroll;
@@ -199,8 +264,20 @@ span.hoverable:hover {
   }
   #right {
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 3px;
   }
+
+  #left {
+    margin-bottom: 3px;
+    margin-right: 0px;
+  }
+
+  #expand-sidebar .icon {
+    transform: rotate(90deg);
+  }
+}
+
+
 }
 
 /* Small screens */
