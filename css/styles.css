@@ -112,7 +112,7 @@ html,
 }
 
 #left {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   margin-right: 0px;
 
   position: relative;
@@ -142,7 +142,7 @@ html,
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  margin-left: 3px;
+  margin-left: 4px;
   margin-top: 0px;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -187,6 +187,8 @@ div.sticky {
   min-height: 20px;
   min-width: 20px;
   position: relative;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 #expand-sidebar {
@@ -202,6 +204,8 @@ div.sticky {
   margin: -10px 0 0 -10px;
   outline: 0;
   border: 0;
+
+  background-color: #fff;
 }
 
 #expand-sidebar .icon {
@@ -226,8 +230,9 @@ span.note {
     height: 15px;
 }  
 
-.content div {
-  overflow: scroll;
+.content > div {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 figure {
@@ -259,6 +264,31 @@ span.hoverable:hover {
   border-bottom: 3px solid black;
 }
 
+html {
+    overflow: hidden;
+    /*overflow-x: hidden;*/
+}
+@-moz-document url-prefix() {
+    html,body{overflow: hidden !important;}
+}
+::-webkit-scrollbar {
+    width: 0px;   /*remove scrollbar space */
+    background: transparent;   /*optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+}
+
+.outer-container {
+  -ms-overflow-style: none;  
+  overflow: -moz-scrollbars-none; 
+}
+.outer-container::-webkit-scrollbar { 
+  display: none; 
+}
+
+
 /* Medium screens */
 @media all and (max-width: 800px) {
   .content {
@@ -269,11 +299,11 @@ span.hoverable:hover {
   }
   #right {
     margin-left: 0px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   #left {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     margin-right: 0px;
   }
 
